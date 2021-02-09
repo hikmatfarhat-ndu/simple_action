@@ -550,7 +550,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.run = void 0;
 const core = __importStar(__nccwpck_require__(722));
-const github = __importStar(__nccwpck_require__(408));
+//import * as github from '@actions/github'
 exports.run = function (input) {
     const token = process.env['GITHUB_TOKEN'] || core.getInput('token');
     if (!token || token === '') {
@@ -560,13 +560,13 @@ exports.run = function (input) {
         console.log(`token DEFINED`);
     }
     // Create the octokit client
-    const octokit = new github.GitHub(token);
-    if (!octokit) {
-        console.log('CANNOT octokit');
-    }
-    else {
-        console.log('octokit successful');
-    }
+    //   const octokit: github.GitHub = new github.GitHub(token)
+    //   if (!octokit) {
+    //       console.log('CANNOT octokit')
+    //   }
+    //   else {
+    //       console.log('octokit successful')
+    //   }
 };
 
 
