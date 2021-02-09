@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-import {run} from 'helper'
+import {run} from 'helper.ts'
 try {
   // `who-to-greet` input defined in action metadata file
   console.log("On branch master")

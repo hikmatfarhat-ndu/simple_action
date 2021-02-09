@@ -7,8 +7,8 @@ module.exports =
 
 "use strict";
 __nccwpck_require__.r(__webpack_exports__);
-/* harmony import */ var helper__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(667);
-/* harmony import */ var helper__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nccwpck_require__.n(helper__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var helper_ts__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(767);
+/* harmony import */ var helper_ts__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nccwpck_require__.n(helper_ts__WEBPACK_IMPORTED_MODULE_0__);
 const core = __nccwpck_require__(722);
 const github = __nccwpck_require__(408);
 
@@ -16,7 +16,7 @@ try {
   // `who-to-greet` input defined in action metadata file
   console.log("On branch master")
   console.log("VERSION 1.0.1")
-  ;(0,helper__WEBPACK_IMPORTED_MODULE_0__.run)("input to helper")
+  ;(0,helper_ts__WEBPACK_IMPORTED_MODULE_0__.run)("input to helper")
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
@@ -5819,10 +5819,10 @@ module.exports = eval("require")("encoding");
 
 /***/ }),
 
-/***/ 667:
+/***/ 767:
 /***/ ((module) => {
 
-module.exports = eval("require")("helper");
+module.exports = eval("require")("helper.ts");
 
 
 /***/ }),
