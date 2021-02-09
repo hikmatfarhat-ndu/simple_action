@@ -25367,6 +25367,9 @@ exports.run = function (token) {
         const nwo = process.env['GITHUB_REPOSITORY'] || '/';
         const [owner, repo] = nwo.split('/');
         console.log(`owner=${owner}, repo=${repo}`);
+        octokit.repos.listForOrg({ org: `$owner`, type: "private", }).then(({ data }) => {
+            console.log(`${data}`);
+        });
     }
 };
 
