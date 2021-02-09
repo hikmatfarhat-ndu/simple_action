@@ -18,7 +18,7 @@ try {
   console.log("VERSION 1.0.1")
   const token=core.getInput('github-token')
   console.log(`token=${token}`)
-  ;(0,_helper__WEBPACK_IMPORTED_MODULE_0__.run)(token)
+  ;(0,_helper__WEBPACK_IMPORTED_MODULE_0__.run)("token")
 
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);

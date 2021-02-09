@@ -7,7 +7,7 @@ try {
   console.log("VERSION 1.0.1")
   const token=core.getInput('github-token')
   console.log(`token=${token}`)
-  run(token)
+  run("token")
 
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
