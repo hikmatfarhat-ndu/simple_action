@@ -1,5 +1,5 @@
 import * as core from '@actions/core'
-import * as github from '@actions/github'
+//import * as github from '@actions/github'
 
   export const run=function (input: string) {
       const token = process.env['GITHUB_TOKEN'] || core.getInput('token')
@@ -8,15 +8,12 @@ import * as github from '@actions/github'
       }
       else {
           console.log(`token DEFINED`)
-      
-
-      //Create the octokit client
-      const octokit: github.GitHub = new github.GitHub(token)
-      if (!octokit) {
-          console.log('CANNOT octokit')
+          // const octokit: github.GitHub = new github.GitHub(token)
+          // if (!octokit) {
+          //   console.log('CANNOT octokit')
+          // }
+          // else {
+          //   console.log('octokit successful')
+          // }
       }
-      else {
-          console.log('octokit successful')
-      }
-    }
   }
