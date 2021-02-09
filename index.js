@@ -6,12 +6,12 @@ try {
   console.log("On branch master")
   console.log("VERSION 1.0.1")
   run('helper')
-  if(!github-token){
-    console.log("index=> token not defined")
-  }
-  else{
-    console.log("index=>token defined ")
-  }
+  // if(!github-token){
+  //   console.log("index=> token not defined")
+  // }
+  // else{
+  //   console.log("index=>token defined ")
+  // }
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
