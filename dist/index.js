@@ -17,9 +17,9 @@ try {
   console.log("On branch master")
   console.log("VERSION 1.0.1")
   const token=core.getInput('github-token')
-  ;(0,_helper__WEBPACK_IMPORTED_MODULE_0__.run)('helper')
   console.log(`token=${token}`)
-  
+  ;(0,_helper__WEBPACK_IMPORTED_MODULE_0__.run)(token)
+
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
@@ -25349,21 +25349,21 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.run = void 0;
 const core = __importStar(__nccwpck_require__(3722));
-//import * as github from '@actions/github'
-exports.run = function (input) {
-    const token = process.env['GITHUB_TOKEN'] || core.getInput('token');
-    if (!token || token === '') {
-        console.log(`token UNDEFINED ${input}`);
+const github = __importStar(__nccwpck_require__(8408));
+exports.run = function (token) {
+    const t = process.env['GITHUB_TOKEN'] || core.getInput('token');
+    if (!t || token === '') {
+        console.log(`token UNDEFINED ${t}`);
     }
     else {
         console.log(`token DEFINED`);
-        // const octokit: github.GitHub = new github.GitHub(token)
-        // if (!octokit) {
-        //   console.log('CANNOT octokit')
-        // }
-        // else {
-        //   console.log('octokit successful')
-        // }
+    }
+    const octokit = new github.GitHub(token);
+    if (!octokit) {
+        console.log('CANNOT octokit');
+    }
+    else {
+        console.log('octokit successful');
     }
 };
 
