@@ -25364,6 +25364,9 @@ exports.run = function (token) {
     }
     else {
         console.log('octokit successful');
+        const nwo = process.env['GITHUB_REPOSITORY'] || '/';
+        const [owner, repo] = nwo.split('/');
+        console.log(`owner=${owner}, repo=${repo}`);
     }
 };
 
