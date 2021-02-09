@@ -8,7 +8,7 @@ import * as github from '@actions/github'
       }
       else {
           console.log(`token DEFINED`)
-      }
+      
 
       //Create the octokit client
       const octokit: github.GitHub = new github.GitHub(token)
@@ -18,4 +18,5 @@ import * as github from '@actions/github'
       else {
           console.log('octokit successful')
       }
+    }
   }
