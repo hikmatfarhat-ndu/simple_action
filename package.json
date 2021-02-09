@@ -1,6 +1,6 @@
 {
   "name": "simple_action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "[Reference](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action)",
   "main": "index.js",
   "scripts": {

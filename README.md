@@ -47,3 +47,26 @@ try {
 1. change the main value in action.yml from index.js to dist/index.js
 1. commit
 
+# Writing the workflow
+Let REPO=name of your repo containing the action we created in the previous section.
+
+In another repo create .github/workflows/main.yml
+```yml
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+    - name: Hello world action step
+      id: hello
+      uses: (GITHUB personal or organization accoutn)/REPO@main
+      with:
+        who-to-greet: 'Mona the Octocat'
+    # Use the output from the `hello` step
+    - name: Get the output time
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
+```
+1. __IMPORTANT__: it seems the engine for github action automatically use the __master__ branch whereas newly created repos the default is the __main__ branch.
+
