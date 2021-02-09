@@ -1,10 +1,11 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-
+import {run} from 'helper'
 try {
   // `who-to-greet` input defined in action metadata file
   console.log("On branch master")
   console.log("VERSION 1.0.1")
+  run("input to helper")
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();

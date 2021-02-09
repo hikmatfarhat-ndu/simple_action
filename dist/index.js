@@ -3,8 +3,12 @@ module.exports =
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 690:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
 
+"use strict";
+__nccwpck_require__.r(__webpack_exports__);
+/* harmony import */ var helper__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(667);
+/* harmony import */ var helper__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nccwpck_require__.n(helper__WEBPACK_IMPORTED_MODULE_0__);
 const core = __nccwpck_require__(722);
 const github = __nccwpck_require__(408);
 
@@ -12,6 +16,7 @@ try {
   // `who-to-greet` input defined in action metadata file
   console.log("On branch master")
   console.log("VERSION 1.0.1")
+  ;(0,helper__WEBPACK_IMPORTED_MODULE_0__.run)("input to helper")
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
@@ -5814,6 +5819,14 @@ module.exports = eval("require")("encoding");
 
 /***/ }),
 
+/***/ 667:
+/***/ ((module) => {
+
+module.exports = eval("require")("helper");
+
+
+/***/ }),
+
 /***/ 357:
 /***/ ((module) => {
 
@@ -5950,6 +5963,46 @@ module.exports = require("zlib");;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__nccwpck_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => module['default'] :
+/******/ 				() => module;
+/******/ 			__nccwpck_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__nccwpck_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__nccwpck_require__.o(definition, key) && !__nccwpck_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__nccwpck_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__nccwpck_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/compat */
 /******/ 	
 /******/ 	__nccwpck_require__.ab = __dirname + "/";/************************************************************************/
