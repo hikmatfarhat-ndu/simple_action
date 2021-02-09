@@ -16,13 +16,10 @@ try {
   // `who-to-greet` input defined in action metadata file
   console.log("On branch master")
   console.log("VERSION 1.0.1")
+  const token=core.getInput('github-token')
   ;(0,_helper__WEBPACK_IMPORTED_MODULE_0__.run)('helper')
-  // if(!github-token){
-  //   console.log("index=> token not defined")
-  // }
-  // else{
-  //   console.log("index=>token defined ")
-  // }
+  console.log(`token=${token}`)
+  
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
