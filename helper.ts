@@ -1,6 +1,7 @@
 import * as core from '@actions/core'
 //import * as github from '@actions/github'
 
+
   export const run=function (input: string) {
       const token = process.env['GITHUB_TOKEN'] || core.getInput('token')
       if (!token || token === '') {
