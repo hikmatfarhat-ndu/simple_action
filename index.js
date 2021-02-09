@@ -6,9 +6,9 @@ try {
   console.log("On branch master")
   console.log("VERSION 1.0.1")
   const token=core.getInput('github-token')
-  run('helper')
   console.log(`token=${token}`)
-  
+  run(token)
+
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
